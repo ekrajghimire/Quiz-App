@@ -22,6 +22,7 @@ class _QuizAppState extends State<QuizApp> {
           titleTextStyle: const TextStyle(color: Colors.white),
           backgroundColor: Colors.pink,
         ),
-        body: start_screen());
+        body: const start_screen());
   }
 }
+// test
