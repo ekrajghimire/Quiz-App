@@ -15,9 +15,14 @@ class _start_screenState extends State<start_screen> {
         children: <Widget>[
           // Image
           const SizedBox(height: 30.0),
-          const Image(
-            image: AssetImage('images/quiz-logo.png'),
-            width: 300,
+
+          //Opacity to image
+          const Opacity(
+            opacity: 0.9,
+            child: Image(
+              image: AssetImage('images/quiz-logo.png'),
+              width: 300,
+            ),
           ),
           const SizedBox(
             height: 60,
