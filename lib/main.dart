@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizapp/start_screen.dart';
+import 'package:quizapp/quiz.dart';
 
 void main() => runApp(const MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -16,12 +16,6 @@ class QuizApp extends StatefulWidget {
 class _QuizAppState extends State<QuizApp> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: const Text("Adv. Quiz App"),
-          titleTextStyle: const TextStyle(color: Colors.white),
-          backgroundColor: Colors.pink,
-        ),
-        body: const start_screen());
+    return const Quiz();
   }
 }
