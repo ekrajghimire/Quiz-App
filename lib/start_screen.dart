@@ -14,7 +14,7 @@ class _start_screenState extends State<start_screen> {
       child: Column(
         children: <Widget>[
           // Image
-          SizedBox(height: 30.0),
+          const SizedBox(height: 30.0),
           const Image(
             image: AssetImage('images/quiz-logo.png'),
             width: 300,
@@ -39,9 +39,22 @@ class _start_screenState extends State<start_screen> {
             color: Colors.pink,
             padding:
                 const EdgeInsets.symmetric(horizontal: 52.0, vertical: 18.0),
-            child: const Text('Start Quiz',
-                style: TextStyle(color: Colors.white, fontSize: 22)),
-          ),
+            child: const Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(
+                  Icons.arrow_right_outlined,
+                  color: Colors.white,
+                  size: 52.0,
+                ),
+                SizedBox(width: 8),
+                Text(
+                  'Start Quiz',
+                  style: TextStyle(color: Colors.white, fontSize: 22),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
