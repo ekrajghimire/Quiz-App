@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 
-class start_screen extends StatefulWidget {
-  const start_screen(this.startQuiz, {super.key});
+class StartScreen extends StatefulWidget {
+  const StartScreen(this.startQuiz, {super.key});
 
   final void Function() startQuiz;
+
   @override
-  State<start_screen> createState() => _start_screenState();
+  State<StartScreen> createState() => _StartScreenState();
 }
 
-class _start_screenState extends State<start_screen> {
+class _StartScreenState extends State<StartScreen> {
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
+        mainAxisSize: MainAxisSize.min, // To center contents properly
         children: <Widget>[
           // Image
           const SizedBox(height: 30.0),
 
-          //Opacity to image
+          // Opacity to image
           const Opacity(
             opacity: 0.9,
             child: Image(
@@ -29,19 +31,20 @@ class _start_screenState extends State<start_screen> {
             height: 60,
           ),
 
-          //Text
+          // Text
           const Text(
             "Let's Play Quiz",
             style: TextStyle(
-                color: Colors.pink,
-                fontSize: 34.0,
-                fontWeight: FontWeight.bold),
+              color: Colors.pink,
+              fontSize: 34.0,
+              fontWeight: FontWeight.bold,
+            ),
           ),
 
-          //Button
+          // Button
           const SizedBox(height: 50),
           MaterialButton(
-            onPressed: () {},
+            onPressed: widget.startQuiz, // Corrected the function call
             color: Colors.pink,
             padding:
                 const EdgeInsets.symmetric(horizontal: 52.0, vertical: 18.0),
@@ -60,7 +63,7 @@ class _start_screenState extends State<start_screen> {
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

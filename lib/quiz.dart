@@ -10,7 +10,13 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
-  Widget activeScreen = const start_screen();
+  Widget? activeScreen;
+
+  @override
+  void initState() {
+    activeScreen = start_screen(switchScreen);
+    super.initState();
+  }
 
   void switchScreen() {
     setState(() {
@@ -21,11 +27,12 @@ class _QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Adv. Quiz App"),
-          titleTextStyle: const TextStyle(color: Colors.white),
-          backgroundColor: Colors.pink,
-        ),
-        body: activeScreen);
+      appBar: AppBar(
+        title: const Text("Adv. Quiz App"),
+        titleTextStyle: const TextStyle(color: Colors.white),
+        backgroundColor: Colors.pink,
+      ),
+      body: activeScreen,
+    );
   }
 }
