@@ -44,7 +44,7 @@ class _StartScreenState extends State<StartScreen> {
           // Button
           const SizedBox(height: 50),
           MaterialButton(
-            onPressed: widget.startQuiz, // Corrected the function call
+            onPressed: widget.startQuiz,
             color: Colors.pink,
             padding:
                 const EdgeInsets.symmetric(horizontal: 52.0, vertical: 18.0),
