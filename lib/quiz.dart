@@ -28,15 +28,23 @@ class _QuizState extends State<Quiz> {
 
   @override
   Widget build(BuildContext context) {
+    Widget screenWidget = StartScreen(switchScreen);
+    if (activeScreen == 'questions-screen') {
+      screenWidget = const QuestionScreen();
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Adv. Quiz App"),
         titleTextStyle: const TextStyle(color: Colors.white),
         backgroundColor: Colors.pink,
       ),
-      body: activeScreen == 'start-screen'
-          ? StartScreen(switchScreen)
-          : const QuestionScreen(),
+      // ternery expression
+      //   body: activeScreen == 'start-screen'
+      //       ? StartScreen(switchScreen)
+      //       : const QuestionScreen(),
+      // );
+      body: screenWidget,
     );
   }
 }
