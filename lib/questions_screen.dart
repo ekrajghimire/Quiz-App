@@ -37,13 +37,6 @@ class _QuestionScreenState extends State<QuestionScreen> {
                 child: AnswerButton(answerText: answer, onTap: () {}),
               );
             }),
-            // AnswerButton(answerText: currentQuestion.answers[0], onTap: () {}),
-            // const SizedBox(height: 10),
-            // AnswerButton(answerText: currentQuestion.answers[1], onTap: () {}),
-            // const SizedBox(height: 10),
-            // AnswerButton(answerText: currentQuestion.answers[2], onTap: () {}),
-            // const SizedBox(height: 10),
-            // AnswerButton(answerText: currentQuestion.answers[3], onTap: () {}),
           ],
         ),
       ),
