@@ -31,7 +31,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
             const SizedBox(
               height: 30,
             ),
-            ...currentQuestion.answers.map((answer) {
+            ...currentQuestion.getShuffledAnswers().map((answer) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: AnswerButton(answerText: answer, onTap: () {}),
