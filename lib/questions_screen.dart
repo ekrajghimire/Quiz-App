@@ -51,7 +51,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
                 padding: const EdgeInsets.all(8.0),
                 child: AnswerButton(
                   answerText: answer,
-                  onTap: answerQuestion,
+                  onTap: () {
+                    answerQuestion(answer);
+                  },
                 ),
               );
             }),
