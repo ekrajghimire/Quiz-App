@@ -13,8 +13,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
   var currentQuestionIndex = 0;
 
   void answerQuestion() {
-    // currentQuestionIndex += 1;
-    currentQuestionIndex++;
+    setState(() {
+      currentQuestionIndex++;
+    });
   }
 
   @override
