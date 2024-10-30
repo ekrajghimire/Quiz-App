@@ -42,7 +42,10 @@ class _QuestionScreenState extends State<QuestionScreen> {
             ...currentQuestion.getShuffledAnswers().map((answer) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: AnswerButton(answerText: answer, onTap: () {}),
+                child: AnswerButton(
+                  answerText: answer,
+                  onTap: answerQuestion,
+                ),
               );
             }),
           ],
