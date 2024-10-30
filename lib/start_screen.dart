@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class StartScreen extends StatefulWidget {
   const StartScreen(this.startQuiz, {super.key});
@@ -32,9 +33,9 @@ class _StartScreenState extends State<StartScreen> {
           ),
 
           // Text
-          const Text(
+          Text(
             "Let's Play Quiz",
-            style: TextStyle(
+            style: GoogleFonts.lato(
               color: Colors.pink,
               fontSize: 34.0,
               fontWeight: FontWeight.bold,
