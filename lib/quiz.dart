@@ -53,11 +53,6 @@ class _QuizState extends State<Quiz> {
         titleTextStyle: const TextStyle(color: Colors.white),
         backgroundColor: Colors.pink,
       ),
-      // ternery expression
-      //   body: activeScreen == 'start-screen'
-      //       ? StartScreen(switchScreen)
-      //       : const QuestionScreen(),
-      // );
       body: screenWidget,
     );
   }
