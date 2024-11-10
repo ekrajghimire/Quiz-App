@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/data/questions.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({
@@ -8,7 +9,18 @@ class ResultScreen extends StatelessWidget {
 
   final List<String> chosenAnswers;
 
-  List<Map<String, Object>> getSummaryData() {}
+  List<Map<String, Object>> getSummaryData() {
+    final List<Map<String, Object>> summary = [];
+
+    for (var i = 0; i < chosenAnswers.length; i++) {
+      summary.add({
+        'question_index': i,
+        'question': questions,
+      });
+    }
+
+    return summary;
+  }
 
   @override
   Widget build(BuildContext context) {
