@@ -8,6 +8,8 @@ class ResultScreen extends StatelessWidget {
 
   final List<String> chosenAnswers;
 
+  List<Map<String, Object>> getSummaryData() {}
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
