@@ -41,6 +41,17 @@ class _StartScreenState extends State<StartScreen> {
               fontWeight: FontWeight.bold,
             ),
           ),
+          const SizedBox(
+            height: 20,
+          ),
+          Text(
+            'Developed by: Ekraj Ghimire',
+            style: GoogleFonts.lato(
+              color: Colors.black54,
+              fontSize: 18.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
 
           // Button
           const SizedBox(height: 50),
