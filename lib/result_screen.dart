@@ -27,6 +27,9 @@ class ResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final numTotalQuestions = 0;
+    final numCorrectQuestions = 0;
+
     return SizedBox(
       width: double.infinity,
       child: Container(
