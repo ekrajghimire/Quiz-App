@@ -49,7 +49,7 @@ class _QuizState extends State<Quiz> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Adv. Quiz App"),
+        title: const Text("Advanced Quiz App"),
         titleTextStyle: const TextStyle(color: Colors.white),
         backgroundColor: Colors.pink,
       ),

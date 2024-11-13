@@ -1,7 +1,8 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:quizapp/data/questions.dart';
+import 'package:quizapp/main.dart';
 import 'package:quizapp/question_summary.dart';
+import 'package:quizapp/quiz.dart'; // Make sure to import main.dart if needed.
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({
@@ -51,7 +52,14 @@ class ResultScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            TextButton(onPressed: () {}, child: const Text('Restart Quiz')),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => const Quiz()),
+                );
+              },
+              child: const Text('Restart Quiz'),
+            ),
           ],
         ),
       ),
