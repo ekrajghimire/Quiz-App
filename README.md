@@ -1,6 +1,8 @@
 # quizapp
 
 A new Flutter project.
+<a href="https://quiz-app-jet-phi.vercel.app"> Click here to try </a>
+
 
 ## Getting Started
 
